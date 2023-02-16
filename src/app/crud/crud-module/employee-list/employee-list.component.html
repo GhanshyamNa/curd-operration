@@ -1,0 +1,31 @@
+
+<!-- <div *ngFor="let s of emplist">
+{{s.id}}
+{{s.name}}
+{{s.uname}}
+{{s.password}}
+</div> -->
+
+<table class="table table-borderless table-dark">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of emplist">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.uname}}</td>
+        <td>{{s.password}}</td>
+        <td><a class="btn" (click)="editdata(s)">  
+            <i class="fa fa-edit"></i>  </a> </td>
+            <td><a class="btn" (click)="deletedata(s.id)">
+                <i class="fa fa-trash"></i>  </a> </td> 
+                <!-- when we click on icon it will generate event delete data -->
+      </tr>
+    </tbody>
+  </table>
